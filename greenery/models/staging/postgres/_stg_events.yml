@@ -1,4 +1,0 @@
-version: 2
-models:
-    - name: events
-      description:  Contains demographic information about addresses

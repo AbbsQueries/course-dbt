@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+
+  - name: int_sources
+    schema: public
+    database: raw
+
+    tables:
+      - name: int_product_inventory
+        description: Intermidate table for products and their current inventory based on orders.
+        columns:
+        - name: order_guid
+          description: unique order ids
+          tests:
+            - not_null
+            - unique
+      - name: int_users
+        description: Intermidate table for users and their associated addresses.
+        columns:
+        - name: user_guid
+          description: unique user ids
+          tests:
+            - not_null
+            - unique
+      - name: int_product_page_views
+        description: Intermidate table for products and their daily page view counts.
+        columns:
+        - name: product_guid
+          description: product ids assoicated with page views
+          tests:
+            - not_null
+        
+           

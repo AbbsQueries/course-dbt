@@ -1,4 +1,0 @@
-version: 2
-models:
-    - name: addresses
-      description:  Contains demographic information about addresses

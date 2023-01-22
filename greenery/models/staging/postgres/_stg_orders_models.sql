@@ -3,13 +3,13 @@
     materialized="view") }}
 SELECT 
      ADDRESS_ID AS address_guid
-    ,CREATED_AT
+    ,CREATED_AT as order_created_at_utc
     ,DELIVERED_AT
     ,ESTIMATED_DELIVERY_AT
     ,ORDER_COST
     ,ORDER_ID AS order_guid
     ,ORDER_TOTAL
-    ,PROMO_ID
+    ,PROMO_ID AS promo_guid
     ,SHIPPING_COST
     ,SHIPPING_SERVICE
     ,STATUS

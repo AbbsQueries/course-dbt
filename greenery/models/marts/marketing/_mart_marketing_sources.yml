@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+
+  - name: mart_marketing_sources
+    schema: public
+    database: raw
+
+    tables:
+      - name: user_order_facts
+        description: The offical table for users and their associated orders.
+        columns:
+        - name: user_guid
+          description: unique user ids
+          tests:
+            - not_null
+            - unique
+    

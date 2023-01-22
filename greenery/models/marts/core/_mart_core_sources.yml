@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+
+  - name: mart_core_sources
+    schema: public
+    database: raw
+
+    tables:
+      - name: dim_users
+        description: The offical table for users and their associated addresses.
+        columns:
+        - name: user_guid
+          description: unique user ids
+          tests:
+            - not_null
+            - unique
+      - name: dim_products
+        description: Table for products and their current inventory based on orders.
+        columns:
+        - name: order_guid
+          description: unique order ids
+          tests:
+            - not_null
+            - unique
+      - name: fact_orders
+        columns:
+        - name: user_guid
+          description: unique user ids
+          tests:
+            - not_null
+            - unique
+
