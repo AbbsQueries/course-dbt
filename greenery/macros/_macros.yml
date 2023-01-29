@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+
+  - name: macros
+    schema: public
+    database: raw
+
+    tables:
+      - name: event_type_group
+        description: grouping of event type found on _stg_event_models
+      - name: grants
+        description: applies grants to schema
+      - name: dbt_utils.get_column_values

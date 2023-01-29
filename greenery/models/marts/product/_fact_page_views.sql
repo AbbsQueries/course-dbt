@@ -7,7 +7,7 @@
     ,prod_inv.NAME
     ,prod_inv.total_price_per_product
     ,prod_inv.order_guid
-        ,prod_inv.quantity
+    ,prod_inv.quantity
    ,prod_pv.event_timestamp_utc
    ,prod_pv.event_type
    ,prod_pv.user_guid

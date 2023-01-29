@@ -14,5 +14,5 @@ SELECT
     ,SHIPPING_SERVICE
     ,STATUS
     ,TRACKING_ID AS tracking_guid  
-    , USER_ID AS user_guid 
+    ,USER_ID AS user_guid 
 FROM {{ source('postgres_sources', 'orders') }}

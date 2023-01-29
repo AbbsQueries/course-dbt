@@ -30,5 +30,6 @@ sources:
           description: product ids assoicated with page views
           tests:
             - not_null
-        
+      - name: int_prod_page_view
+        description: love
            

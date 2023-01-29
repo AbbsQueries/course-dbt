@@ -4,15 +4,16 @@
   )
 }}
   select 
-    p.PRODUCT_ID AS product_guid
+    p.PRODUCT_guid AS product_guid
+    ,status
    ,p.INVENTORY
    ,p.NAME
-    ,p.PRICE
-    ,o.quantity
-   ,orders.order_id AS order_guid
-   ,orders.user_id AS user_guid
-   ,orders.created_at AS order_created_at_utc
+  ,p.PRICE
+  ,o.quantity
+   ,orders.order_guid AS order_guid
+   ,orders.user_guid AS user_guid
+   ,orders.order_created_at_utc AS order_created_at_utc
    ,p.price*o.quantity  AS total_price_per_product
-from  {{ source ('postgres_sources', 'products') }} p
-join {{ source ('postgres_sources', 'order_items') }} o using(product_id)
-join {{ source ('postgres_sources', 'orders')}} orders using (order_id)
+from  {{ ref('_stg_products_models') }} p
+join {{ ref('_stg_order_items_models') }} o using(product_guid)
+join {{ ref ('_stg_orders_models')}} orders using (order_guid)
