@@ -37,4 +37,4 @@ models:
     example:
       +materialized: view
       +post-hook:
-      - "{{ grant(role='analytics_engineer') }}"
+        - "{{ grant(role='reporting') }}"

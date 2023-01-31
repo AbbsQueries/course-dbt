@@ -11,4 +11,5 @@ sources:
         description: grouping of event type found on _stg_event_models
       - name: grants
         description: applies grants to schema
-      - name: dbt_utils.get_column_values
+      - name: sum_of
+        description: sum the column value count of any desired column
